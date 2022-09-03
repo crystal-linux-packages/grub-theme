@@ -1,18 +1,20 @@
 # Maintainer: echo -n 'bWF0dEBnZXRjcnlzdC5hbA==' | base64 --decode
 
-pkgname=crystal-grub-theme
+_name=grub-theme
+
+pkgname="crystal-$_name"
 pkgver=1.0.1
 pkgrel=1
 pkgdesc="GRUB Theme for Crystal Linux"
 arch=('any')
-url="https://github.com/crystal-linux/grub-theme"
+url="https://github.com/crystal-linux/$_name"
 depends=('grub')
 source=("git+$url")
 
 sha256sums=("SKIP")
 
 package() {
-    cd ${srcdir}/grub-theme
+    cd ${srcdir}/${_name}
     mkdir -p ${pkgdir}/usr/share/grub/themes
     cp -rv crystal ${pkgdir}/usr/share/grub/themes/.
 }
