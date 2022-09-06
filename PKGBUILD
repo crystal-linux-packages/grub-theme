@@ -16,6 +16,11 @@ source=("git+$url")
 sha256sums=('SKIP')
 
 package() {
-    cd "$srcdir/$_name"    
-    install -Dm 0755 crystal "$pkgdir/usr/share/grub/themes/."
+    cd "$srcdir/$_name"
+        
+    mkdir -p \
+        "$pkgdir/usr/share/grub/themes"
+                
+    cp -R crystal \
+        "$pkgdir/usr/share/grub/themes/."
 }
