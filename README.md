@@ -1,1 +1,1 @@
-PKGBUILD for crystal-linux/grub-theme
+# PKGBUILD for crystal-linux/grub-theme
