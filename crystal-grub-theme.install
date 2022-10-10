@@ -1,0 +1,9 @@
+post_install() {
+	sed -i s/GRUB_DISTRIBUTOR=\"Arch\"/GRUB_DISTRIBUTOR=\"Crystal\"/g etc/default/grub
+	grub-mkconfig -o /boot/grub/grub.cfg
+}
+
+post_upgrade() {
+	sed -i s/GRUB_DISTRIBUTOR=\"Arch\"/GRUB_DISTRIBUTOR=\"Crystal\"/g etc/default/grub
+	grub-mkconfig -o /boot/grub/grub.cfg
+}
