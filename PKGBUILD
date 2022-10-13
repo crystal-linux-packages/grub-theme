@@ -12,7 +12,6 @@ arch=('any')
 url="https://github.com/crystal-linux/${_pkgname}"
 license=('MIT')
 depends=('grub')
-install="${pkgname}.install"
 source=("${pkgname}-${pkgver}::${url}/archive/v${pkgver}.tar.gz")
 sha256sums=('09d892520164598b5a866c7c82c9c1b55dfd7563a331e2bb01191a0d88d4683c')
 
